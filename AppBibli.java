@@ -3,19 +3,17 @@
 public class AppBibli {
 
     public static void main(String[] args) {
-        Member [] people = new Member[1000];
+        Member[] people = new Member[1000];
         Bibli bibli = new Bibli("La chaise jaune", "2 rue du caca, Lorient");
-        for (int i = 0; i < 100; i++) {
-            people[i] = new Member("chaise", "caca", 12);
-            bibli.addMember(people[i]);
-        }
+        people[0] = new Member("chaise", "caca", 12);
+        bibli.addMember(people[0]);
 
         bibli.printMembers();
 
-        for (int i = 0; i < 100; i ++) {
-            bibli.addBook("la chaise verte", "jean claude");
-        }
+        bibli.addBook("la chaise verte", 2020, "jean claude");
+        bibli.addDVD("COUCOU", "Jean pierre");
+        bibli.AddCommic("Jean claude et ses cramptés", "Nicolas", "Antoine");
 
-        bibli.printBooks();
+        bibli.printDocuments();
     }
 }

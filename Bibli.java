@@ -6,7 +6,7 @@ public class Bibli {
     private String name;
     private String street;
     private Boolean opened;
-    private Book [] books;
+    private Document [] documents;
     private Member [] members;
 
     // Constructors
@@ -15,7 +15,7 @@ public class Bibli {
         this.name = name;
         this.street = street;
         this.opened = false;
-        this.books = new Book[100];
+        this.documents = new Document[100];
         this.members = new Member[100];        
     }
 
@@ -36,21 +36,43 @@ public class Bibli {
         }
     }
 
-    public void addBook(String title, String author) {
+    public void addBook(String title, int release, String author) {
         for (int i = 0; i < 100; i ++) {
-            if (this.books[i] == null) {
-                this.books[i] = new Book(title, author);
+            if (this.documents[i] == null) {
+                this.documents[i] = new Book(title, release, author);
                 return;
             }
         }
     }
 
-    public void printBooks() {
-        for (int i = 0; i < 100; i++) {
-            if (this.books[i] != null) {
-                this.books[i].print();
+    public void addDVD(String title, String real) {
+        for (int i = 0; i < 100; i ++) {
+            if (this.documents[i] == null) {
+                this.documents[i] = new DVD(title, real);
+                return;
             }
         }
+    }
+
+    public void AddCommic(String title, String drawer, String writer) {
+        for (int i = 0; i < 100; i ++) {
+            if (this.documents[i] == null) {
+                this.documents[i] = new Commic(title, drawer, writer);
+                return;
+            }
+        }
+    }
+
+    public void printDocuments() {
+        for (int i = 0; i < 100; i++) {
+            if (this.documents[i] != null) {
+                this.documents[i].print();
+            }
+        }
+    }
+
+    public void borrow(Document document, Member member) {
+        document.borrow(member);
     }
 
     // Methods

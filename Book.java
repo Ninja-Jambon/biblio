@@ -1,22 +1,23 @@
 // Roberto Leizour 24/01/2024
 
-public class Book {
-    // Attributes
+public class Book extends Document {
+    // Atributes 
 
-    private String title;
-    private String author;
-    public Member borrower;
+    int release;
+    String author;
 
     // Constructors
 
-    public Book(String title, String author) {
-        this.title = title;
+    public Book(String title, int release, String author) {
+        super(title);
+
+        this.release = release;
         this.author = author;
     }
 
     // Methods
 
     public void print() {
-        System.out.println("Title: " + this.title + " Author: " + this.author);
+        System.out.println("Title : " + this.title + ", Release : " + this.release + ", Author : " + this.author);
     }
 }
