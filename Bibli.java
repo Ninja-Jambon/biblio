@@ -5,7 +5,7 @@ public class Bibli {
 
     private String name;
     private String street;
-    private Boolean opened;
+    private Boolean open;
     private Document [] documents;
     private Member [] members;
 
@@ -14,10 +14,12 @@ public class Bibli {
     public Bibli(String name, String street) {
         this.name = name;
         this.street = street;
-        this.opened = false;
+        this.open = false;
         this.documents = new Document[100];
         this.members = new Member[100];        
     }
+
+    // Methods
 
     public void addMember(Member member) {
         for (int i = 0; i < 100; i++) {
@@ -75,5 +77,11 @@ public class Bibli {
         document.borrow(member);
     }
 
-    // Methods
+    public void printBibli() {
+        System.out.println(this.name + ", " + this.street + ", Open : " + this.open);
+        System.out.println("\nMembers :\n");
+        this.printMembers();
+        System.out.println("\nDocuments :\n");
+        this.printDocuments();
+    }
 }

@@ -8,12 +8,10 @@ public class AppBibli {
         people[0] = new Member("chaise", "caca", 12);
         bibli.addMember(people[0]);
 
-        bibli.printMembers();
-
         bibli.addBook("la chaise verte", 2020, "jean claude");
         bibli.addDVD("COUCOU", "Jean pierre");
         bibli.AddCommic("Jean claude et ses cramptés", "Nicolas", "Antoine");
 
-        bibli.printDocuments();
+        bibli.printBibli();
     }
 }
