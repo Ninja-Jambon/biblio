@@ -16,7 +16,7 @@ public class Bibli {
         this.street = street;
         this.open = false;
         this.documents = new Document[100];
-        this.members = new Member[100];        
+        this.members = new Member[20];        
     }
 
     // Methods

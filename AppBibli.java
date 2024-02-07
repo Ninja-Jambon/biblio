@@ -3,7 +3,7 @@
 public class AppBibli {
 
     public static void main(String[] args) {
-        Member[] people = new Member[1000];
+        Member[] people = new Member[100];
         Bibli bibli = new Bibli("La chaise jaune", "2 rue du caca, Lorient");
         people[0] = new Member("chaise", "caca", 12);
         bibli.addMember(people[0]);
@@ -13,5 +13,7 @@ public class AppBibli {
         bibli.AddCommic("Jean claude et ses cramptés", "Nicolas", "Antoine");
 
         bibli.printBibli();
+
+        
     }
 }

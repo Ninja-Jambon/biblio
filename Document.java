@@ -17,6 +17,6 @@ abstract public class Document {
     abstract void print();
 
     public void borrow(Member member) {
-        borrower = member;
+        this.borrower = member;
     }
 }
